@@ -1,53 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@drawable/card_teacher"
-    android:layout_margin="10dp"
+<!-- 📋 Professional Survey Item Card -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
-    <TextView
-        android:id="@+id/tvStudentName"
-        android:text="Student: "
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:textColor="#2B2B2B"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <RatingBar
-        android:id="@+id/ratingBarSurvey"
-        android:numStars="5"
-        android:stepSize="1.0"
-        android:isIndicator="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Student Name -->
+        <TextView
+            android:id="@+id/tvStudentName"
+            android:text="Student: "
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#1A237E"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <RatingBar
-        android:id="@+id/helpfulBarSurvey"
-        android:numStars="5"
-        android:stepSize="1.0"
-        android:isIndicator="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Overall Rating Label -->
+        <TextView
+            android:text="⭐ Overall Rating"
+            android:textSize="13sp"
+            android:textColor="#546E7A"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/tvComment"
-        android:text="Comment:"
-        android:textSize="14sp"
-        android:textColor="#424242"
-        android:layout_marginTop="6dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Overall Rating Bar -->
+        <RatingBar
+            android:id="@+id/ratingBarSurvey"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:isIndicator="true"
+            android:progressTint="#FFC107"
+            android:secondaryProgressTint="#FFE082"
+            android:layout_marginBottom="12dp"
+            style="?android:attr/ratingBarStyleSmall"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/tvDate"
-        android:text="Date:"
-        android:textColor="#757575"
-        android:textSize="13sp"
-        android:layout_marginTop="8dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <!-- Helpfulness Label -->
+        <TextView
+            android:text="💡 Helpfulness"
+            android:textSize="13sp"
+            android:textColor="#546E7A"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-</LinearLayout>
+        <!-- Helpfulness Rating Bar -->
+        <RatingBar
+            android:id="@+id/helpfulBarSurvey"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:isIndicator="true"
+            android:progressTint="#4CAF50"
+            android:secondaryProgressTint="#A5D6A7"
+            android:layout_marginBottom="12dp"
+            style="?android:attr/ratingBarStyleSmall"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ECEFF1"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Comment -->
+        <TextView
+            android:id="@+id/tvComment"
+            android:text="Comment:"
+            android:textSize="15sp"
+            android:textColor="#37474F"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:text="Date:"
+            android:textColor="#78909C"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif"
+            android:drawablePadding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

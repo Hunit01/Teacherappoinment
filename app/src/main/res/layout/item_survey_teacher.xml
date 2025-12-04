@@ -1,44 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<!-- 📊 Professional Survey Teacher Item Card -->
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#FFFFFF"
-    android:elevation="4dp"
-    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
 
-    <TextView
-        android:id="@+id/tvSurveyStudent"
-        android:text="Student:"
-        android:textStyle="bold"
-        android:textSize="16sp"
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvSurveyRating"
-        android:text="Rating:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <!-- Student Name -->
+        <TextView
+            android:id="@+id/tvSurveyStudent"
+            android:text="Student:"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#1A237E"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/tvSurveyHelpful"
-        android:text="Helpfulness:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <!-- Rating Info Container -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
 
-    <TextView
-        android:id="@+id/tvSurveyComment"
-        android:text="Comment:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingEnd="8dp">
 
-    <TextView
-        android:id="@+id/tvSurveyDate"
-        android:text="Date:"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="⭐ Rating"
+                    android:textSize="12sp"
+                    android:textColor="#546E7A"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-</LinearLayout>
+                <TextView
+                    android:id="@+id/tvSurveyRating"
+                    android:text="Rating:"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#263238"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="8dp">
+
+                <TextView
+                    android:text="💡 Helpfulness"
+                    android:textSize="12sp"
+                    android:textColor="#546E7A"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvSurveyHelpful"
+                    android:text="Helpfulness:"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#263238"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ECEFF1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Comment Label -->
+        <TextView
+            android:text="💬 Comment"
+            android:textSize="12sp"
+            android:textColor="#546E7A"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Comment Text -->
+        <TextView
+            android:id="@+id/tvSurveyComment"
+            android:text="Comment:"
+            android:textSize="15sp"
+            android:textColor="#37474F"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tvSurveyDate"
+            android:text="Date:"
+            android:textSize="13sp"
+            android:textColor="#78909C"
+            android:fontFamily="sans-serif"
+            android:drawablePadding="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 👨‍🎓 Professional Student Dashboard -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_greenblue"
+    android:background="#F5F7FA"
     android:fillViewport="true">
 
     <LinearLayout
@@ -11,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <!-- ============================================
-             PAGE 1 : DASHBOARD
+             📱 PAGE 1: DASHBOARD
         ============================================ -->
         <LinearLayout
             android:id="@+id/layoutDashboard"
@@ -19,187 +20,399 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- HEADER -->
+            <!-- 🎨 PROFILE HEADER CARD -->
             <LinearLayout
                 android:orientation="vertical"
-                android:padding="24dp"
-                android:gravity="center_horizontal"
+                android:background="@drawable/card_teacher"
+                android:padding="32dp"
+                android:gravity="center"
+                android:elevation="8dp"
+                android:layout_margin="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/imgProfile"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:background="@drawable/circle_white"
-                    android:scaleType="centerCrop"
-                    android:padding="4dp" />
+                <!-- Profile Image with Shadow Ring -->
+                <FrameLayout
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_marginBottom="20dp">
 
+                    <!-- Shadow -->
+                    <View
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:background="@drawable/circle_white"
+                        android:backgroundTint="#E3F2FD"
+                        android:elevation="2dp"/>
+
+                    <!-- Profile Image -->
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_white"
+                        android:scaleType="centerCrop"
+                        android:elevation="4dp"
+                        android:padding="3dp"/>
+                </FrameLayout>
+
+                <!-- Welcome Text -->
                 <TextView
                     android:id="@+id/tvWelcome"
-                    android:text="Welcome"
-                    android:textSize="22sp"
-                    android:textColor="#FFFFFF"
+                    android:text="Welcome Back! 👋"
+                    android:textSize="26sp"
+                    android:textColor="#1A237E"
                     android:textStyle="bold"
-                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
+
+                <!-- Subtitle -->
+                <TextView
+                    android:text="Ready to learn today?"
+                    android:textSize="15sp"
+                    android:textColor="#78909C"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Edit Profile Button -->
+                <Button
+                    android:id="@+id/btnEditMode"
+                    android:text="✏️ Edit Profile"
+                    android:background="@drawable/btn_primary"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="4dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"/>
+
             </LinearLayout>
 
-            <!-- EDIT BUTTON ONLY -->
+            <!-- 📋 STUDENT ACTIONS SECTION -->
             <LinearLayout
-                android:background="#FFFFFF"
-                android:padding="20dp"
+                android:orientation="vertical"
+                android:background="@drawable/card_teacher"
+                android:padding="24dp"
                 android:elevation="6dp"
-                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/btnEditMode"
-                    android:text="EDIT PROFILE"
-                    android:background="@drawable/btn_primary"
-                    android:textColor="#FFF"
+                <!-- Section Header -->
+                <TextView
+                    android:text="🎯 Quick Actions"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#263238"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp" />
+                    android:layout_height="wrap_content"/>
+
+                <!-- Search Teacher Button -->
+                <Button
+                    android:id="@+id/btnSearchTeacher"
+                    android:text="🔍 Search Teacher"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@drawable/btn_primary"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"/>
+
+                <!-- Book Appointment Button -->
+                <Button
+                    android:id="@+id/btnBook"
+                    android:text="📅 Book Appointment"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@drawable/btn_primary"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"/>
+
+                <!-- My Appointments Button -->
+                <Button
+                    android:id="@+id/btnMyAppointments"
+                    android:text="📆 My Appointments"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@drawable/btn_primary"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"/>
+
+                <!-- My Surveys Button -->
+                <Button
+                    android:id="@+id/btnMySurveys"
+                    android:text="📊 My Surveys"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@drawable/btn_primary"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"/>
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#ECEFF1"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Logout Button -->
+                <Button
+                    android:id="@+id/btnLogoutStudent"
+                    android:text="🚪 Logout"
+                    android:textColor="#D32F2F"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:background="@drawable/rounded_white"
+                    android:elevation="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"/>
+
             </LinearLayout>
-
-            <!-- STUDENT ACTIONS -->
-            <TextView
-                android:text="Student Actions"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <Button
-                android:id="@+id/btnSearchTeacher"
-                android:text="🔍  Search Teacher"
-                android:textColor="#FFF"
-                android:background="@drawable/btn_primary"
-                android:layout_margin="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btnBook"
-                android:text="📝  Book Appointment"
-                android:textColor="#FFF"
-                android:background="@drawable/btn_primary"
-                android:layout_margin="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <Button
-                android:id="@+id/btnMyAppointments"
-                android:text="📅  My Appointments"
-                android:textColor="#FFF"
-                android:background="@drawable/btn_primary"
-                android:layout_margin="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btnMySurveys"
-                android:text="📝  My Surveys"
-                android:textColor="#FFF"
-                android:background="@drawable/btn_primary"
-                android:layout_margin="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btnLogoutStudent"
-                android:text="🚪 Logout"
-                android:textColor="#FFF"
-                android:background="@drawable/btn_primary"
-                android:layout_margin="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
-
-
         <!-- ============================================
-             PAGE 2 : EDIT PROFILE (Hidden by default)
+             ✏️ PAGE 2: EDIT PROFILE (Hidden by default)
         ============================================ -->
         <ScrollView
             android:id="@+id/layoutEditProfile"
             android:visibility="gone"
-            android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
                 android:orientation="vertical"
+                android:padding="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/editImgProfile"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:background="@drawable/circle_white"
-                    android:scaleType="centerCrop"
-                    android:padding="4dp"
-                    android:layout_gravity="center_horizontal"/>
-
-
-                <Button
-                    android:id="@+id/btnEditChangePhoto"
-                    android:text="Change Photo"
-                    android:textColor="#FFF"
-                    android:background="@drawable/btn_primary"
-                    android:layout_marginTop="12dp"
+                <!-- 📝 Edit Profile Header Card -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/card_teacher"
+                    android:padding="32dp"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/editName"
-                    android:hint="Full Name"
-                    android:background="@drawable/rounded_white"
-                    android:padding="12dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    <!-- Header Text -->
+                    <TextView
+                        android:text="✏️ Edit Your Profile"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A237E"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:layout_marginBottom="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
 
-                <EditText
-                    android:id="@+id/editClass"
-                    android:hint="Class / Year"
-                    android:background="@drawable/rounded_white"
-                    android:padding="12dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    <!-- Profile Image with Ring -->
+                    <FrameLayout
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:layout_marginBottom="20dp">
 
-                <EditText
-                    android:id="@+id/editPhone"
-                    android:hint="Phone"
-                    android:background="@drawable/rounded_white"
-                    android:padding="12dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                        <!-- Outer Ring -->
+                        <View
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:background="@drawable/circle_white"
+                            android:backgroundTint="#E3F2FD"
+                            android:elevation="2dp"/>
 
-                <Button
-                    android:id="@+id/btnSaveEdit"
-                    android:text="Save Changes"
-                    android:textColor="#FFF"
-                    android:background="@drawable/btn_primary"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp" />
+                        <!-- Profile Image -->
+                        <ImageView
+                            android:id="@+id/editImgProfile"
+                            android:layout_width="146dp"
+                            android:layout_height="146dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/circle_white"
+                            android:scaleType="centerCrop"
+                            android:elevation="4dp"
+                            android:padding="3dp"/>
+                    </FrameLayout>
 
-                <Button
-                    android:id="@+id/btnBack"
-                    android:text="Back"
-                    android:background="@drawable/rounded_white"
-                    android:layout_marginTop="12dp"
+                    <!-- Change Photo Button -->
+                    <Button
+                        android:id="@+id/btnEditChangePhoto"
+                        android:text="📷 Change Photo"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/btn_primary"
+                        android:elevation="3dp"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"/>
+
+                </LinearLayout>
+
+                <!-- 📋 Edit Form Card -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/card_teacher"
+                    android:padding="28dp"
+                    android:elevation="6dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp" />
+                    android:layout_height="wrap_content">
+
+                    <!-- Form Title -->
+                    <TextView
+                        android:text="📝 Personal Information"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:textColor="#263238"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- Name Input -->
+                    <TextView
+                        android:text="👤 Full Name"
+                        android:textSize="14sp"
+                        android:textColor="#546E7A"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/editName"
+                        android:hint="Enter your full name"
+                        android:textColor="#263238"
+                        android:textColorHint="#B0BEC5"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"
+                        android:background="@drawable/rounded_white"
+                        android:padding="18dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- Class Input -->
+                    <TextView
+                        android:text="📚 Class / Year"
+                        android:textSize="14sp"
+                        android:textColor="#546E7A"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/editClass"
+                        android:hint="Enter your class or year"
+                        android:textColor="#263238"
+                        android:textColorHint="#B0BEC5"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"
+                        android:background="@drawable/rounded_white"
+                        android:padding="18dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- Phone Input -->
+                    <TextView
+                        android:text="📞 Phone Number"
+                        android:textSize="14sp"
+                        android:textColor="#546E7A"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/editPhone"
+                        android:hint="Enter your phone number"
+                        android:inputType="phone"
+                        android:textColor="#263238"
+                        android:textColorHint="#B0BEC5"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"
+                        android:background="@drawable/rounded_white"
+                        android:padding="18dp"
+                        android:layout_marginBottom="28dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- Save Button -->
+                    <Button
+                        android:id="@+id/btnSaveEdit"
+                        android:text="💾 Save Changes"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textSize="17sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/btn_primary"
+                        android:elevation="3dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"/>
+
+                    <!-- Back Button -->
+                    <Button
+                        android:id="@+id/btnBack"
+                        android:text="⬅️ Back to Dashboard"
+                        android:textColor="#546E7A"
+                        android:textStyle="bold"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
