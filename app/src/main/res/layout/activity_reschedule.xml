@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 🔄 Modern Reschedule Appointment 📅 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_greenblue"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="🔄"
+                android:textSize="48sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvTeacherName"
+                android:text="Reschedule Appointment"
+                android:textSize="22sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Form Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="12dp"
+            android:padding="24dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/tvDate"
+                android:text="📅 Select Date"
+                android:textColor="#757575"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:background="@drawable/rounded_white"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnPickDate"
+                android:text="Pick Date"
+                android:background="@drawable/btn_primary"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:text="⏰ Select Time"
+                android:textColor="#757575"
+                android:textSize="15sp"
+                android:padding="16dp"
+                android:background="@drawable/rounded_white"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnPickTime"
+                android:text="Pick Time"
+                android:background="@drawable/btn_primary"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Message -->
+            <EditText
+                android:id="@+id/etMessage"
+                android:hint="💬 Write message (optional)"
+                android:background="@drawable/rounded_white"
+                android:gravity="top|start"
+                android:padding="16dp"
+                android:minLines="4"
+                android:textColor="#2B2B2B"
+                android:textColorHint="#9E9E9E"
+                android:textSize="15sp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Reschedule Button -->
+            <Button
+                android:id="@+id/btnReschedule"
+                android:text="🔄 Send Reschedule Request"
+                android:background="@drawable/btn_primary"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:elevation="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

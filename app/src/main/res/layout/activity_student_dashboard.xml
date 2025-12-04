@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_greenblue"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ============================================
+             PAGE 1 : DASHBOARD
+        ============================================ -->
+        <LinearLayout
+            android:id="@+id/layoutDashboard"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/circle_white"
+                    android:scaleType="centerCrop"
+                    android:padding="4dp" />
+
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:text="Welcome"
+                    android:textSize="22sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- EDIT BUTTON ONLY -->
+            <LinearLayout
+                android:background="#FFFFFF"
+                android:padding="20dp"
+                android:elevation="6dp"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnEditMode"
+                    android:text="EDIT PROFILE"
+                    android:background="@drawable/btn_primary"
+                    android:textColor="#FFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+
+            <!-- STUDENT ACTIONS -->
+            <TextView
+                android:text="Student Actions"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnSearchTeacher"
+                android:text="🔍  Search Teacher"
+                android:textColor="#FFF"
+                android:background="@drawable/btn_primary"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnBook"
+                android:text="📝  Book Appointment"
+                android:textColor="#FFF"
+                android:background="@drawable/btn_primary"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnMyAppointments"
+                android:text="📅  My Appointments"
+                android:textColor="#FFF"
+                android:background="@drawable/btn_primary"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnMySurveys"
+                android:text="📝  My Surveys"
+                android:textColor="#FFF"
+                android:background="@drawable/btn_primary"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnLogoutStudent"
+                android:text="🚪 Logout"
+                android:textColor="#FFF"
+                android:background="@drawable/btn_primary"
+                android:layout_margin="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        <!-- ============================================
+             PAGE 2 : EDIT PROFILE (Hidden by default)
+        ============================================ -->
+        <ScrollView
+            android:id="@+id/layoutEditProfile"
+            android:visibility="gone"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/editImgProfile"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:background="@drawable/circle_white"
+                    android:scaleType="centerCrop"
+                    android:padding="4dp"
+                    android:layout_gravity="center_horizontal"/>
+
+
+                <Button
+                    android:id="@+id/btnEditChangePhoto"
+                    android:text="Change Photo"
+                    android:textColor="#FFF"
+                    android:background="@drawable/btn_primary"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/editName"
+                    android:hint="Full Name"
+                    android:background="@drawable/rounded_white"
+                    android:padding="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/editClass"
+                    android:hint="Class / Year"
+                    android:background="@drawable/rounded_white"
+                    android:padding="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/editPhone"
+                    android:hint="Phone"
+                    android:background="@drawable/rounded_white"
+                    android:padding="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnSaveEdit"
+                    android:text="Save Changes"
+                    android:textColor="#FFF"
+                    android:background="@drawable/btn_primary"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:text="Back"
+                    android:background="@drawable/rounded_white"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 📝 Modern Registration - Duolingo Style 🎓 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_greenblue"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 🎨 Top Section: Welcome Area -->
+        <LinearLayout
+            android:id="@+id/topSection"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 🎓 Icon -->
+            <TextView
+                android:text="🎓"
+                android:textSize="64sp"
+                android:layout_marginBottom="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- Title -->
+            <TextView
+                android:text="Create Account"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- Subtitle -->
+            <TextView
+                android:text="Join us to start learning"
+                android:textSize="15sp"
+                android:textColor="#E0F7FA"
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- 💎 Bottom Card: Registration Form -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/card_auth"
+            android:elevation="16dp"
+            android:layout_below="@id/topSection"
+            android:layout_marginTop="-20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Form Header -->
+            <TextView
+                android:text="Student Registration"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#2B2B2B"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- 👤 Name -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="👤"
+                    android:textSize="20sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:hint="Full Name"
+                    android:textColor="#2B2B2B"
+                    android:textColorHint="#9E9E9E"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- 📧 Email -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="📧"
+                    android:textSize="20sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#2B2B2B"
+                    android:textColorHint="#9E9E9E"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- 🔒 Password -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="🔒"
+                    android:textSize="20sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="#2B2B2B"
+                    android:textColorHint="#9E9E9E"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- 🎂 Age -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="🎂"
+                    android:textSize="20sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/etAge"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:textColor="#2B2B2B"
+                    android:textColorHint="#9E9E9E"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- ⚧️ Gender -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="⚧️"
+                    android:textSize="20sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/etGender"
+                    android:hint="Gender"
+                    android:textColor="#2B2B2B"
+                    android:textColorHint="#9E9E9E"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- 📚 Class -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="📚"
+                    android:textSize="20sp"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/etClass"
+                    android:hint="Class / Level"
+                    android:textColor="#2B2B2B"
+                    android:textColorHint="#9E9E9E"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkRemember"
+                android:text="Remember Me"
+                android:textColor="#2B2B2B"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- ✅ Register Button -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:text="Register"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

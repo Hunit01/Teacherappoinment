@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 🎯 Modern Vibrant Button Style 💎 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Bright Blue Solid Color (Like Duolingo) -->
+    <solid android:color="#1CB0F6" />
+
+    <!-- Pill-shaped Button -->
+    <corners android:radius="50dp" />
+
+    <!-- Comfortable Padding -->
+    <padding
+        android:left="24dp"
+        android:right="24dp"
+        android:top="16dp"
+        android:bottom="16dp"/>
+
+</shape>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bg_greenblue"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- HEADER -->
+    <TextView
+        android:text="📅 All Appointments"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- ==============================================
+         ORIGINAL BUTTON ROW (NO CHANGE)
+    ================================================= -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnPending"
+            android:layout_width="2dp"
+            android:layout_height="77dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_primary"
+            android:text="⏳ Pending"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnApproved"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_primary"
+            android:text="✅ Approved ▼"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDeclined"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_primary"
+            android:text="❌ Declined ▼"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- ==============================================
+         APPROVED DROPDOWN (HIDDEN BY DEFAULT)
+    ================================================= -->
+    <LinearLayout
+        android:id="@+id/layoutApprovedOptions"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnFilterApproved"
+            android:text="Only Approved"
+            android:background="@android:color/transparent"
+            android:textColor="#000"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCC"
+            android:layout_marginVertical="4dp"/>
+
+        <Button
+            android:id="@+id/btnFilterCompleted"
+            android:text="Completed"
+            android:background="@android:color/transparent"
+            android:textColor="#000"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- ==============================================
+         DECLINED DROPDOWN (HIDDEN BY DEFAULT)
+    ================================================= -->
+    <LinearLayout
+        android:id="@+id/layoutDeclinedOptions"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="#FFFFFF"
+        android:elevation="6dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnFilterDeclined"
+            android:text="Only Declined"
+            android:background="@android:color/transparent"
+            android:textColor="#000"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCC"
+            android:layout_marginVertical="4dp"/>
+
+        <Button
+            android:id="@+id/btnFilterCancelled"
+            android:text="Cancelled (By Student)"
+            android:background="@android:color/transparent"
+            android:textColor="#000"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Recycler -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAppointments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

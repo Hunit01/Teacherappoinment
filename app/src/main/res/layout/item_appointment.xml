@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/card_teacher"
+    android:elevation="6dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="12dp"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Teacher / Student Name -->
+    <TextView
+        android:id="@+id/tvTeacherName"
+        android:text="👨‍🏫 Teacher:"
+        android:textSize="17sp"
+        android:textColor="#2B2B2B"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/tvDate"
+        android:text="📅 Date:"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginTop="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Time -->
+    <TextView
+        android:id="@+id/tvTime"
+        android:text="⏰ Time:"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/tvMessage"
+        android:text="💬 Message:"
+        android:textSize="14sp"
+        android:textColor="#2B2B2B"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:text="⏳ Status: Pending"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#1CB0F6"
+        android:background="#E3F2FD"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- ACTION BUTTONS -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Student Cancel -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:text="❌ Cancel"
+            android:textColor="#FFF"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+        <!-- Student Reschedule -->
+        <Button
+            android:id="@+id/btnReschedule"
+            android:text="🔄 Reschedule"
+            android:textColor="#FFF"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+        <!-- Teacher Approve -->
+        <Button
+            android:id="@+id/btnApprove"
+            android:text="✅ Approve"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+        <!-- Teacher Decline -->
+        <Button
+            android:id="@+id/btnDecline"
+            android:text="❌ Decline"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+        <!-- Teacher Completed -->
+        <Button
+            android:id="@+id/btnCompleted"
+            android:text="✔ Completed"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+        <!-- Student Fill Survey -->
+        <Button
+            android:id="@+id/btnFillSurvey"
+            android:text="📝 Fill Survey"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+        <!-- Teacher Send Survey -->
+        <Button
+            android:id="@+id/btnSendSurvey"
+            android:text="📨 Send Survey"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+        <!-- Student View Notes -->
+        <Button
+            android:id="@+id/btnViewNotes"
+            android:text="📄 View Notes"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+        <!-- Teacher Upload Notes -->
+        <Button
+            android:id="@+id/btnUploadNotes"
+            android:text="📄 Upload Notes"
+            android:visibility="gone"
+            android:textColor="#FFF"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_primary"
+            android:layout_width="0dp"
+            android:layout_height="44dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

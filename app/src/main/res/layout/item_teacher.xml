@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 👨‍🏫 Modern Teacher Card - Clean Design 📚 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/card_teacher"
+    android:elevation="6dp"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Collapsed View -->
+    <TextView
+        android:id="@+id/tvName"
+        android:text="👨‍🏫 Teacher Name"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#2B2B2B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvSubject"
+        android:text="📚 Subject: "
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginTop="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Expandable Section -->
+    <LinearLayout
+        android:id="@+id/layoutMore"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#F8F9FA"
+        android:padding="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:text="📧 Email:"
+            android:textSize="14sp"
+            android:textColor="#2B2B2B"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:text="📞 Phone:"
+            android:textSize="14sp"
+            android:textColor="#2B2B2B"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvQualification"
+            android:text="🎓 Qualification:"
+            android:textSize="14sp"
+            android:textColor="#2B2B2B"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvExperience"
+            android:text="💼 Experience:"
+            android:textSize="14sp"
+            android:textColor="#2B2B2B"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:text="📄 Description:"
+            android:textSize="14sp"
+            android:textColor="#2B2B2B"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnBook"
+            android:text="📝 Book Appointment"
+            android:background="@drawable/btn_primary"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:elevation="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+    </LinearLayout>
+
+</LinearLayout>

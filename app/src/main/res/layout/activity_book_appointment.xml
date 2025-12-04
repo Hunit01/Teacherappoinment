@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 📝 Modern Book Appointment 🗓️ -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_greenblue"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="📝"
+                android:textSize="48sp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvTeacherName"
+                android:text="Book Appointment"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Form Card -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="12dp"
+            android:padding="24dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Date Display -->
+            <TextView
+                android:id="@+id/tvDate"
+                android:text="📅 Select Date"
+                android:textSize="15sp"
+                android:textColor="#757575"
+                android:padding="16dp"
+                android:background="@drawable/rounded_white"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnPickDate"
+                android:text="Pick Date"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Time Display -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:text="⏰ Select Time"
+                android:textSize="15sp"
+                android:textColor="#757575"
+                android:padding="16dp"
+                android:background="@drawable/rounded_white"
+                android:layout_marginBottom="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnPickTime"
+                android:text="Pick Time"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Message -->
+            <EditText
+                android:id="@+id/etMessage"
+                android:hint="💬 Reason / Message"
+                android:minLines="4"
+                android:gravity="top|start"
+                android:textColor="#2B2B2B"
+                android:textColorHint="#9E9E9E"
+                android:background="@drawable/rounded_white"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Book Button -->
+            <Button
+                android:id="@+id/btnBook"
+                android:text="✅ Book Appointment"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

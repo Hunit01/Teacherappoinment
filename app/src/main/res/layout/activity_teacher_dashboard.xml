@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 👨‍🏫 Modern Teacher Dashboard 📊 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_greenblue"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ============================
+             🏠 DASHBOARD SECTION
+        ============================== -->
+        <LinearLayout
+            android:id="@+id/layoutDashboard"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 🎨 Header -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="28dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- ⭐ TEACHER PROFILE PHOTO -->
+                <ImageView
+                    android:id="@+id/teacherImgProfile"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/circle_white"
+                    android:scaleType="centerCrop"
+                    android:padding="3dp"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvWelcomeTeacher"
+                    android:text="Welcome, Teacher"
+                    android:textStyle="bold"
+                    android:textSize="28sp"
+                    android:textColor="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <!-- Menu Card -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="#F3F4F6"
+            android:elevation="12dp"
+            android:padding="24dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnMyProfile"
+                android:text="👤 My Profile"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/btnViewAllAppointments"
+                android:text="📋 All Appointments"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/btnViewSurveys"
+                android:text="📝 View Surveys"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp" />
+
+            <Button
+                android:id="@+id/btnLogoutTeacher"
+                android:text="🚪 Logout"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- ============================
+         📝 PROFILE SECTION
+    ============================== -->
+    <LinearLayout
+        android:id="@+id/layoutProfile"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="#F3F4F6"
+    android:elevation="12dp"
+    android:padding="24dp"
+    android:layout_margin="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="📝 My Profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2B2B2B"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- ⭐ Teacher Photo -->
+    <ImageView
+        android:id="@+id/editTeacherProfileImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/circle_white"
+        android:scaleType="centerCrop"
+        android:padding="4dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Change Photo Button -->
+    <Button
+        android:id="@+id/btnTeacherChangePhoto"
+        android:text="Change Photo"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_primary"
+        android:textColor="#FFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:hint="👤 Name"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etSubject"
+        android:hint="📚 Subject"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:hint="📞 Phone"
+        android:inputType="phone"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etQualification"
+        android:hint="🎓 Qualification"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etExperience"
+        android:hint="💼 Experience"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:hint="📄 Description"
+        android:minLines="3"
+        android:gravity="top"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnSaveProfile"
+        android:text="💾 Save Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_primary"
+        android:elevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/tvSaveStatus"
+        android:text="💡 Tap Save to update your profile"
+        android:textSize="13sp"
+        android:textColor="#757575"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnBackDashboard"
+        android:text="⬅️ Back to Dashboard"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_primary"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+
+</LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>

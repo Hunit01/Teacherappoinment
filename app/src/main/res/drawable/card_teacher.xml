@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 👨‍🏫 Clean White Card with Soft Shadow Effect 📋 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Pure White Background -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Soft Rounded Corners -->
+    <corners android:radius="16dp" />
+
+    <!-- Light Gray Border for Subtle Definition -->
+    <stroke
+        android:width="1dp"
+        android:color="#E8F4F8" />
+
+    <!-- Comfortable Padding -->
+    <padding
+        android:top="20dp"
+        android:bottom="20dp"
+        android:left="20dp"
+        android:right="20dp" />
+
+</shape>

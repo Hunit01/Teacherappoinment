@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ➕ Modern Add Teacher Form 👨‍🏫 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF"
+    android:elevation="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Header -->
+    <TextView
+        android:text="➕ Add New Teacher"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2B2B2B"
+        android:layout_marginBottom="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Name -->
+    <EditText
+        android:id="@+id/etTeacherName"
+        android:hint="👤 Teacher Name"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:padding="14dp"
+        android:textSize="15sp"
+        android:layout_marginBottom="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Subject -->
+    <EditText
+        android:id="@+id/etTeacherSubject"
+        android:hint="📚 Subject (e.g. Maths, Physics)"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:padding="14dp"
+        android:textSize="15sp"
+        android:layout_marginBottom="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Email -->
+    <EditText
+        android:id="@+id/etTeacherEmail"
+        android:hint="📧 Teacher Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:padding="14dp"
+        android:textSize="15sp"
+        android:layout_marginBottom="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/etTeacherPass"
+        android:hint="🔒 Password"
+        android:inputType="textPassword"
+        android:textColor="#2B2B2B"
+        android:textColorHint="#9E9E9E"
+        android:background="@drawable/rounded_white"
+        android:padding="14dp"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/cbRememberTeacher"
+        android:text="Remember me"
+        android:textColor="#2B2B2B"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

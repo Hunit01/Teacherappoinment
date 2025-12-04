@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ✨ Light & Vibrant Teal-Sky Gradient Background 🌊 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Bright & Light Gradient: Light Teal to Sky Blue -->
+    <gradient
+        android:startColor="#58D5C9"
+        android:centerColor="#6DD5ED"
+        android:endColor="#88E3FF"
+        android:angle="135"
+        android:type="linear" />
+
+    <!-- Smooth Rounded Corners -->
+    <corners android:radius="0dp" />
+
+</shape>

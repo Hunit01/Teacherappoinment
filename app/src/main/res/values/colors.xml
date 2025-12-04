@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 🎨 Modern Light Color Palette - Duolingo Inspired 💎 -->
+<resources>
+
+    <!-- 🖤 Base Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 🌊 Light Teal & Sky Blue Shades (Primary) -->
+    <color name="teal_light">#58D5C9</color>
+    <color name="sky_light">#6DD5ED</color>
+    <color name="sky_bright">#88E3FF</color>
+
+    <!-- 💙 Vibrant Blue (Button Color - Like Duolingo) -->
+    <color name="button_primary">#1CB0F6</color>
+    <color name="button_pressed">#149FDB</color>
+
+    <!-- ☁️ Background Shades -->
+    <color name="background_gradient_start">#58D5C9</color>
+    <color name="background_gradient_mid">#6DD5ED</color>
+    <color name="background_gradient_end">#88E3FF</color>
+
+    <!-- ✨ White & Gray Variations -->
+    <color name="white_pure">#FFFFFF</color>
+    <color name="white_smoke">#F8F9FA</color>
+    <color name="gray_light">#E0E0E0</color>
+    <color name="gray_border">#E8F4F8</color>
+
+    <!-- 🎯 Text Colors -->
+    <color name="text_primary">#2B2B2B</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#9E9E9E</color>
+    <color name="text_white">#FFFFFF</color>
+
+    <!-- 🎨 Status Colors -->
+    <color name="status_pending">#1CB0F6</color>
+    <color name="status_approved">#58CC02</color>
+    <color name="status_declined">#FF4B4B</color>
+
+    <!-- 💫 Accent Colors -->
+    <color name="accent_light_blue">#E3F2FD</color>
+    <color name="accent_light_teal">#E0F7FA</color>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 🔐 Premium Auth Card - Duolingo Style 💎 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Pure White Background -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Rounded Corners (Top only for half-screen card) -->
+    <corners
+        android:topLeftRadius="32dp"
+        android:topRightRadius="32dp"
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp" />
+
+    <!-- Generous Padding -->
+    <padding
+        android:top="40dp"
+        android:bottom="40dp"
+        android:left="28dp"
+        android:right="28dp" />
+
+</shape>

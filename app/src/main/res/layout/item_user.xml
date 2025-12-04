@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 👤 Modern User Card 🛠️ -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/card_teacher"
+    android:elevation="6dp"
+    android:layout_margin="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:text="👤 Name"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#2B2B2B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:text="📧 Email"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvRole"
+        android:text="🏷️ Role"
+        android:textColor="#757575"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Teacher Stats -->
+    <TextView
+        android:id="@+id/tvApproved"
+        android:text="✅ Approved: 0"
+        android:textColor="#58CC02"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvDeclined"
+        android:text="❌ Declined: 0"
+        android:textColor="#FF4B4B"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/btnChangeRole"
+        android:text="🔄 Change Role"
+        android:background="@drawable/btn_primary"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:text="🗑️ Delete User"
+        android:background="@drawable/btn_primary"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+</LinearLayout>

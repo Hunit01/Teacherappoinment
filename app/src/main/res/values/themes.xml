@@ -1,0 +1,35 @@
+<!-- 🎨 Professional Teal-Sky Theme Configuration ✨ -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 🌊 Main Application Theme with Beautiful Gradient 💎 -->
+    <style name="Theme.Finalproject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- ✨ Transparent System Bars for Immersive Experience -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- 🎯 Prevent Android from Forcing Dark Navigation Bar -->
+        <item name="android:enforceNavigationBarContrast">false</item>
+
+        <!-- 📱 Allow Content to Flow Under System Bars -->
+        <item name="android:fitsSystemWindows">false</item>
+
+        <!-- 🌈 Stunning Teal-Sky Gradient Background -->
+        <item name="android:windowBackground">@drawable/bg_greenblue</item>
+
+        <!-- 🎨 Apply Custom Premium Button Style -->
+        <item name="materialButtonStyle">@style/CustomButtonStyle</item>
+
+    </style>
+
+    <!-- 🎯 Premium Custom Button Style 💎 -->
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/btn_primary</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">6dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

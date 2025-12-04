@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 👨‍💼 Modern Admin Dashboard 🎯 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bg_greenblue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 🎨 Header Section -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Icon -->
+        <TextView
+            android:text="👨‍💼"
+            android:textSize="56sp"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/tvWelcomeAdmin"
+            android:text="Welcome, Admin"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!-- 📋 Admin Menu Card -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:elevation="12dp"
+            android:padding="24dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 👨‍🎓 View Students -->
+            <Button
+                android:id="@+id/btnViewStudents"
+                android:text="👨‍🎓 View Students"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"/>
+
+            <!-- 👨‍🏫 View Teachers -->
+            <Button
+                android:id="@+id/btnViewTeachers"
+                android:text="👨‍🏫 View Teachers"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"/>
+
+            <!-- 👥 Manage Users -->
+            <Button
+                android:id="@+id/btnManageUsers"
+                android:text="👥 Manage Users"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="14dp"/>
+
+            <!-- ➕ Add Teacher -->
+            <Button
+                android:id="@+id/btnAddTeacher"
+                android:text="➕ Add New Teacher"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_primary"
+                android:elevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

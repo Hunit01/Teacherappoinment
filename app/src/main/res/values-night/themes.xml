@@ -1,0 +1,24 @@
+<!-- 🌙 Night Mode Theme with Teal-Sky Elegance 🌃 -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 🌊 Immersive Night Theme with Full Screen Experience ✨ -->
+    <style name="Theme.Finalproject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- 🚀 Hide Status Bar for Full Immersion -->
+        <item name="android:windowFullscreen">true</item>
+
+        <!-- ✨ Transparent Status Bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <!-- 📱 No Reserved Space for System Bars -->
+        <item name="android:fitsSystemWindows">false</item>
+
+        <!-- 🌈 Consistent Teal-Sky Gradient in Night Mode -->
+        <item name="android:windowBackground">@drawable/bg_greenblue</item>
+
+        <!-- 🎯 Apply Premium Custom Button Style -->
+        <item name="materialButtonStyle">@style/CustomButtonStyle</item>
+
+    </style>
+
+</resources>
